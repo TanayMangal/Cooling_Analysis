@@ -13,10 +13,6 @@ models/
     cad/              voxelized venue geometry
     dev/              time-step studies, energy checks, older launchers (not used for final results)
   README_models_original.txt   original run instructions for both models
-paper/                LaTeX source of the final paper (main.tex, sections/, figures/, data/)
-  figure_sources/     scripts + CSVs that make the paper figures (make_figures.py, HIMCM.mplstyle)
-    extra/            earlier plotting scripts (fig2a/fig2b/fig3)
-    part2b_print/     print-ready Part 2b figures + mermaid flowcharts
 scripts/wpi/          Windows batch files used to run the big sweep on the WPI machine
 archive/              superseded first attempts (frozen-flow Model 2, early shelter model)
 ```
@@ -38,11 +34,6 @@ cd models/model1_basic && python analysis.py          # Model 1 results + figure
 cd models/model2_advanced && python run_m2.py rail     # quick Model 2 rail run
 python launch_wpi.py                                   # full round-8 sweep (Delhi + Dubai), resumable
 python analyze_m2.py                                   # tables + figures from out/
-cd paper/figure_sources && python make_figures.py      # rebuild paper figures from the CSVs
 ```
 
 Results are written to each model's `out/` folder, which is git-ignored. The raw outputs from the final runs are zipped in `../05_Run_Results/`.
-
-## Notes
-
-- `paper/` comes from the last LaTeX export (Nov 18). `../01_Papers/18782_rewrite.pdf` was saved slightly later, so check that the source matches the submitted PDF.
