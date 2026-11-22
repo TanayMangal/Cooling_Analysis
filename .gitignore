@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+out/
+*.jsonl
+# LaTeX build files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
